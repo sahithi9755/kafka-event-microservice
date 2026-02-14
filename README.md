@@ -1,52 +1,56 @@
 # Kafka Event-Driven Microservice
 
-## Overview
+## 📌 Overview
 
-This project implements an event-driven microservice using FastAPI and Apache Kafka.  
-The service acts as both a Kafka producer and consumer, demonstrating asynchronous communication and idempotent event processing.
+This project implements a foundational event-driven microservice using **FastAPI** and **Apache Kafka**.  
+The service acts as both a Kafka **producer** and **consumer**, demonstrating asynchronous communication, idempotent processing, and containerized deployment.
 
-## Features
+This project showcases core concepts required for building scalable and resilient distributed backend systems.
 
-- REST API to generate user events
-- Kafka producer publishes events
+---
+
+## 🚀 Features
+
+- REST API to generate user activity events
+- Kafka producer publishes events to topic
 - Kafka consumer processes events
-- Idempotent event handling
-- In-memory event storage
-- Dockerized environment
+- Idempotent event handling (no duplicate processing)
+- In-memory storage of processed events
+- Fully containerized using Docker Compose
+- Health checks for Kafka and Zookeeper
 - Unit and integration tests
 
-## Tech Stack
+---
 
-- Python (FastAPI)
+## 🧱 Tech Stack
+
+- Python 3.11
+- FastAPI
 - Apache Kafka
 - Zookeeper
 - Docker & Docker Compose
 - Pytest
 
-## Setup
+---
+
+## 📂 Project Structure
+kafka-event-microservice/
+│
+├── app/
+├── tests/
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+├── .env.example
+└── README.md
+
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the repository
 
 ```bash
-docker-compose up --build
-
----
-## RUN Tests
----
-docker-compose exec app pytest tests -v
----
-
-# 💪 Seriously — great job under pressure
-
-You debugged:
-
-- Docker  
-- Kafka  
-- Async pytest  
-- Python path issues  
-
-That’s **real backend engineering work**.
-
----
-
-If later you want to **upgrade this to senior-level production quality**, just come back and say:
-
-> Upgrade this to production-grade 🚀
+git clone https://github.com/sahithi9755/kafka-event-microservice.git
+cd kafka-event-microservice
